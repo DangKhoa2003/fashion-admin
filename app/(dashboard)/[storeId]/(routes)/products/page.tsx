@@ -27,7 +27,7 @@ const ProductsPage = async ({ params }: { params: { storeId: string } }) => {
             name: item.name,
             isFeatured: item.isFeatured,
             isArchived: item.isArchived,
-            price: formatter.format(item.price.toNumber()),
+            price: formatter.format(item.price),
             category: item.category.name,
             inStock: item.inStock,
             size: item.size.name,
@@ -37,7 +37,7 @@ const ProductsPage = async ({ params }: { params: { storeId: string } }) => {
 
       return (
             <div className="flex-col">
-                  <div className="flex-1 space-y-4 p-8 pt-6">
+                  <div className="flex-1 p-8 pt-6 space-y-4">
                         <ProductClient data={formattedProducts} />
                   </div>
             </div>
