@@ -8,7 +8,9 @@ const CategoryPage = async ({
 }) => {
     const category = await prismadb.category.findUnique({
         where: {
-            id: '507f1f77bcf86cd799439011',
+            id: params.categoryId === 'new'
+                    ? '507f1f77bcf86cd799439011'
+                    : params.categoryId,
         },
     });
 

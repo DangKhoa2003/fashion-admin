@@ -40,7 +40,6 @@ export const BillboardFrom: React.FC<BillboardFromProps> = ({
 }) => {
     const params = useParams();
     const router = useRouter();
-    console.log(initialData);
     
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);

@@ -4,7 +4,10 @@ import { BillboardFrom } from './components/billboard-form';
 const Billboard = async ({ params }: { params: { billboardId ?: string } }) => {
     const billboard = await prismadb.billboard.findFirst({
         where: {
-            id: '507f1f77bcf86cd799439011',
+            id:
+                params.billboardId === 'new'
+                    ? '507f1f77bcf86cd799439011'
+                    : params.billboardId,
         },
     });
 
